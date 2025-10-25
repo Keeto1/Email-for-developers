@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - FAFCODE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+     <script src="https://cdn.tailwindcss.com"></script>
+
+
+    
+</head>
+<body class="bg-black text-white font-inter">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-2xl font-bold text-orange-400">FAFCODE</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="hover:text-orange-400 transition-colors">Home</a>
+                    <a href="features.html" class="hover:text-orange-400 transition-colors">Features</a>
+                    <a href="docs.html" class="hover:text-orange-400 transition-colors">Docs</a>
+                    <a href="resources.html" class="hover:text-orange-400 transition-colors">Resources</a>
+                    <a href="company.html" class="text-orange-400">About</a>
+                    <a href="../silo/signin.html" class="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-lg transition-colors">Sign In</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                    <svg id="menuIcon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-40 bg-gray-900/95 backdrop-blur-md hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+            <a href="../index.html" class="hover:text-orange-400 transition-colors">Home</a>
+            <a href="features.html" class="hover:text-orange-400 transition-colors">Features</a>
+            <a href="docs.html" class="hover:text-orange-400 transition-colors">Docs</a>
+            <a href="resources.html" class="hover:text-orange-400 transition-colors">Resources</a>
+            <a href="company.html" class="text-orange-400">About</a>
+            <a href="../silo/signin.html" class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg transition-colors">Sign In</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 px-6">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 hero-animate">
+                    About <span class="text-orange-400 gradient-text">FAFCODE</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 hero-animate">
+                    The story behind this student project and the learning journey
+                </p>
+                <div class="inline-flex items-center space-x-2 text-orange-400 hero-animate">
+                    <span class="status-dot learning"></span>
+                    <span>Student project - Always learning and improving</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Origin Story -->
+        <section class="py-16 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="glass-card p-8 animate-on-scroll">
+                        <h2 class="text-3xl font-bold mb-6">The Beginning</h2>
+                        <p class="text-gray-300 mb-4">
+                            FAFCODE started as a personal challenge to learn modern web development. What began as simple HTML pages has evolved into a comprehensive learning project.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            This project represents months of dedication, countless hours of coding, debugging, and learning from mistakes. It's not just a website - it's a testament to the learning journey.
+                        </p>
+                        <div class="flex items-center space-x-4 mt-6">
+                            <div class="stat-card flex-1">
+                                <div class="stat-number">3</div>
+                                <div class="text-sm text-gray-400">Months Learning</div>
+                            </div>
+                            <div class="stat-card flex-1">
+                                <div class="stat-number">150+</div>
+                                <div class="text-sm text-gray-400">Hours Coded</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 hover-lift">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-semibold">First Steps</h3>
+                            </div>
+                            <p class="text-gray-400 text-sm">Started with basic HTML and CSS, building simple static pages.</p>
+                        </div>
+                        <div class="glass-card p-6 hover-lift">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-semibold">Adding Interactivity</h3>
+                            </div>
+                            <p class="text-gray-400 text-sm">Learned JavaScript to add dynamic features and user interactions.</p>
+                        </div>
+                        <div class="glass-card p-6 hover-lift">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-semibold">Modern Design</h3>
+                            </div>
+                            <p class="text-gray-400 text-sm">Implemented glassmorphism, animations, and responsive design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="py-16 px-6 bg-gradient-to-b from-orange-500 to-black">
+            <div class="container mx-auto max-w-6xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Mission & Vision</h2>
+                    <p class="text-gray-400 text-lg">What drives this learning project forward</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-card p-8 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-300 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-orange-400">Mission</h3>
+                        <p class="text-gray-300">
+                            To continuously learn and apply modern web development techniques while building practical, real-world projects that demonstrate growth and skill development.
+                        </p>
+                    </div>
+                    
+                    <div class="glass-card p-8 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-300 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-float" style="animation-delay: 1s;">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-orange-400">Vision</h3>
+                        <p class="text-gray-300">
+                            To become a skilled full-stack developer capable of creating innovative, user-focused web applications that solve real problems and provide exceptional user experiences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Journey -->
+        <section class="py-16 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl font-bold mb-12 text-center">Learning Journey</h2>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-orange-300 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-bold">01</span>
+                            </div>
+                        </div>
+                        <div class="glass-card p-6 flex-1">
+                            <h3 class="text-xl font-semibold mb-2 text-orange-300">Foundation Building</h3>
+                            <p class="text-gray-300 mb-3">Started with HTML5 semantic structure and CSS3 styling fundamentals.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-orange-400 rounded-full text-xs">HTML5</span>
+                                <span class="px-3 py-1 bg-blue-400 rounded-full text-xs">CSS3</span>
+                                <span class="px-3 py-1 bg-gradient-to-br from-indigo-700 to-rose-500 rounded-full text-xs">Responsive Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-orange-300 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-bold">02</span>
+                            </div>
+                        </div>
+                        <div class="glass-card p-6 flex-1">
+                            <h3 class="text-xl font-semibold mb-2 text-orange-300">JavaScript Mastery</h3>
+                            <p class="text-gray-300 mb-3">Learned modern JavaScript ES6+, DOM manipulation, and event handling.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class=" px-3 py-1 bg-orange-700 rounded-full text-xs">ES6+</span>
+                                <span class="px-3 py-1 bg-green-500 rounded-full text-xs">DOM API</span>
+                                <span class="px-3 py-1 bg-purple-600 rounded-full text-xs">Event Handling</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Classes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-orange-300 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-bold">03</span>
+                            </div>
+                        </div>
+                        <div class="glass-card p-6 flex-1">
+                            <h3 class="text-xl font-semibold mb-2 text-orange-300">Modern Frameworks</h3>
+                            <p class="text-gray-300 mb-3">Explored Tailwind CSS for rapid styling and modern development workflows.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gradient-to-br  from-blue-900 to-blue-600 rounded-full text-xs">Tailwind CSS</span>
+                                <span class="px-3 py-1 border-2 border-white bg-gray-950 rounded-full text-xs">Git/GitHub</span>
+                                <span class="px-3 py-1 bg-white rounded-full text-xs text-black ">NPM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-bold">04</span>
+                            </div>
+                        </div>
+                        <div class="glass-card p-6 flex-1 border-blue-500/20">
+                            <h3 class="text-xl font-semibold mb-2 text-blue-400">Advanced Concepts</h3>
+                            <p class="text-gray-300 mb-3">Currently learning APIs, databases, and full-stack development.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-xs text-blue-300">REST APIs</span>
+                                <span class="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-xs text-blue-300">Node.js</span>
+                                <span class="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-xs text-blue-300">React</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="py-16 px-6 bg-gray-800/30">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl font-bold mb-12 text-center">Core Values</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass-card p-6 text-center hover-lift">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Continuous Learning</h3>
+                        <p class="text-gray-400">Never stop growing. Every challenge is an opportunity to learn something new.</p>
+                    </div>
+
+                    <div class="glass-card p-6 text-center hover-lift">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Collaboration</h3>
+                        <p class="text-gray-400">Learn from others, share knowledge, and grow together as a community.</p>
+                    </div>
+
+                    <div class="glass-card p-6 text-center hover-lift">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Quality Code</h3>
+                        <p class="text-gray-400">Write clean, maintainable code that follows best practices and standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Status -->
+        <section class="py-16 px-6">
+            <div class="container mx-auto max-w-4xl">
+                <div class="glass-card p-8 text-center">
+                    <h2 class="text-3xl font-bold mb-6">Current Status</h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        This project is actively maintained and continuously improved as new skills are acquired.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="stat-card">
+                            <div class="stat-number">95%</div>
+                            <div class="text-sm text-gray-400">Frontend Complete</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">60%</div>
+                            <div class="text-sm text-gray-400">Backend Learning</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">∞</div>
+                            <div class="text-sm text-gray-400">Learning Continues</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="resources.html" class="btn-primary rounded-lg  px-5 py-2 hover:transform transition duration-500 hover:scale-105">
+                            View Learning Resources
+                        </a>
+                        <a href="features.html" class="btn-secondary py-2 rounded-lg px-5 hover:transform transition duration-500 hover:scale-105">
+                            Explore Features
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Goals -->
+        <section class="py-16 px-6 bg-gray-800/30">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl font-bold mb-12 text-center">Future Goals</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass-card p-6 text-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-300 to-red-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">Full-Stack Development</h3>
+                        <p class="text-gray-400 text-sm">Master backend technologies and database management</p>
+                    </div>
+
+                    <div class="glass-card p-6 text-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">Modern Frameworks</h3>
+                        <p class="text-gray-400 text-sm">Learn React, Vue.js, and Node.js ecosystem</p>
+                    </div>
+
+                    <div class="glass-card p-6 text-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">Professional Projects</h3>
+                        <p class="text-gray-400 text-sm">Build real-world applications for actual clients</p>
+                    </div>
+
+                    <div class="glass-card p-6 text-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">Community Contribution</h3>
+                        <p class="text-gray-400 text-sm">Contribute to open-source projects and help others learn</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 px-6">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 class="text-4xl font-bold mb-6 py-5 ">Join the Journey</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Follow along as this project evolves and grows with new skills and technologies
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="docs.html" class="btn-primary py-2 px-5 rounded-lg hover:transform transition duration-500 hover:scale-105">
+                        View Documentation
+                    </a>
+                    <a href="resources.html" class="btn-secondary py-2 px-3 rounded-lg hover:transform transition duration-500 hover:scale-105">
+                        Learning Resources
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-12 px-6">
+        <div class="container mx-auto max-w-6xl text-center">
+            <div class="text-2xl font-bold text-orange-300 mb-4">FAFCODE</div>
+            <p class="text-gray-400 mb-6">Student project - Learning web development</p>
+            <div class="text-sm text-gray-500">
+                © 2024 FAFCODE. Educational project for learning purposes.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+     
+     
+    <script src="../index.js"></script>
+</body>
+</html>

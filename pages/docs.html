@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Development Docs - FAFCODE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-inter">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-2xl font-bold text-orange-300">FAFCODE</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="hover:text-orange-300 transition-colors">Home</a>
+                    <a href="features.html" class="hover:text-orange-300 transition-colors">Features</a>
+                    <a href="docs.html" class="text-orange-300">Docs</a>
+                    <a href="resources.html" class="hover:text-orange-300 transition-colors">Resources</a>
+                    <a href="company.html" class="hover:text-orange-300 transition-colors">About</a>
+                    <a href="../silo/signin.html" class="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-lg transition-colors">Sign In</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                    <svg id="menuIcon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-40 bg-gray-900/95 backdrop-blur-md hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+            <a href="../index.html" class="hover:text-orange-300 transition-colors">Home</a>
+            <a href="features.html" class="hover:text-orange-300 transition-colors">Features</a>
+            <a href="docs.html" class="text-orange-300">Docs</a>
+            <a href="resources.html" class="hover:text-orange-300 transition-colors">Resources</a>
+            <a href="company.html" class="hover:text-orange-300 transition-colors">About</a>
+            <a href="../silo/signin.html" class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg transition-colors">Sign In</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 px-6">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 hero-animate">
+                    Email <span class="text-orange-300">Development</span> Docs
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 hero-animate">
+                    Complete guide to building responsive, cross-client compatible emails
+                </p>
+                <div class="inline-flex items-center space-x-2 text-orange-300 hero-animate">
+                    <span class="w-2 h-2 bg-orange-300 rounded-full animate-pulse"></span>
+                    <span>Updated for modern email clients</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email Development Basics -->
+        <section class="py-16 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">Email Development Fundamentals</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center mr-3">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10zm-1-11.414l-3.536-3.536-1.414 1.414 4.95 4.95 7.07-7.07-1.414-1.414-5.656 5.656z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">HTML for Email</h3>
+                                    <p class="text-sm text-gray-400">Table-based layouts</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Using tables for structure instead of modern CSS layout techniques.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-400 text-sm">✓ Essential</span>
+                                <a href="#html-email" class="text-orange-400 hover:text-orange-300 text-sm">Learn →</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10zm-1-11.414l-3.536-3.536-1.414 1.414 4.95 4.95 7.07-7.07-1.414-1.414-5.656 5.656z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">CSS in Email</h3>
+                                    <p class="text-sm text-gray-400">Inline styles</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Using inline CSS and understanding client-specific limitations.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-400 text-sm">✓ Essential</span>
+                                <a href="#css-email" class="text-orange-400 hover:text-orange-300 text-sm">Learn →</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10zm-1-11.414l-3.536-3.536-1.414 1.414 4.95 4.95 7.07-7.07-1.414-1.414-5.656 5.656z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Responsive Design</h3>
+                                    <p class="text-sm text-gray-400">Mobile optimization</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Creating emails that work on all devices and screen sizes.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-400 text-sm">✓ Essential</span>
+                                <a href="#responsive-email" class="text-orange-400 hover:text-orange-300 text-sm">Learn →</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center mr-3">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10zm-1-11.414l-3.536-3.536-1.414 1.414 4.95 4.95 7.07-7.07-1.414-1.414-5.656 5.656z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Testing & Debugging</h3>
+                                    <p class="text-sm text-gray-400">Cross-client compatibility</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Tools and techniques for testing emails across different clients.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-yellow-400 text-sm">📚 Important</span>
+                                <a href="#testing-email" class="text-orange-400 hover:text-orange-300 text-sm">Learn →</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10zm-1-11.414l-3.536-3.536-1.414 1.414 4.95 4.95 7.07-7.07-1.414-1.414-5.656 5.656z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Accessibility</h3>
+                                    <p class="text-sm text-gray-400">Inclusive design</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Making emails accessible to all users, including those with disabilities.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-yellow-400 text-sm">📚 Important</span>
+                                <a href="#accessibility-email" class="text-orange-400 hover:text-orange-300 text-sm">Learn →</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mr-3">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10zm-1-11.414l-3.536-3.536-1.414 1.414 4.95 4.95 7.07-7.07-1.414-1.414-5.656 5.656z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Best Practices</h3>
+                                    <p class="text-sm text-gray-400">Industry standards</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Following established patterns for better deliverability and engagement.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-blue-400 text-sm">⚡ Advanced</span>
+                                <a href="#best-practices" class="text-orange-400 hover:text-orange-300 text-sm">Learn →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTML for Email -->
+                <div id="html-email" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">HTML for Email Development</h2>
+                    <div class="bg-gray-800 rounded-xl p-6 mb-6">
+                        <h3 class="text-xl font-semibold mb-4 text-orange-300">Why Tables in Email?</h3>
+                        <p class="text-gray-300 mb-4">Unlike modern web development, email HTML relies heavily on tables for layout due to inconsistent CSS support across email clients.</p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold mb-2">Supported Elements</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Tables & nested tables
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Inline styles
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Basic HTML tags
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Limited CSS properties
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Avoid These</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        External stylesheets
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        Modern CSS layouts
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        JavaScript
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        Complex CSS selectors
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-800 rounded-xl p-6">
+                            <h3 class="text-lg font-semibold mb-4">Basic Email Structure</h3>
+                            <pre class="text-sm text-green-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Email Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table width="100%" border="0" cellspacing="0" cellpadding="0"&gt;
+    &lt;tr&gt;
+      &lt;td align="center"&gt;
+        &lt;table width="600" border="0" cellspacing="0" cellpadding="0"&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Content goes here&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            <p class="text-gray-400 text-sm mt-3">Standard table-based structure for email compatibility.</p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6">
+                            <h3 class="text-lg font-semibold mb-4">Email Head Requirements</h3>
+                            <pre class="text-sm text-blue-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Your Email Subject&lt;/title&gt;
+&lt;!--[if mso]&gt;
+  &lt;xml&gt;
+    &lt;o:OfficeDocumentSettings&gt;
+      &lt;o:AllowPNG/&gt;
+      &lt;o:PixelsPerInch&gt;96&lt;/o:PixelsPerInch&gt;
+    &lt;/o:OfficeDocumentSettings&gt;
+  &lt;/xml&gt;
+&lt;![endif]--&gt;</code></pre>
+                            <p class="text-gray-400 text-sm mt-3">Essential meta tags and conditional comments for Outlook.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSS in Email -->
+                <div id="css-email" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">CSS in Email Development</h2>
+                    <div class="bg-gray-800 rounded-xl p-6 mb-6">
+                        <h3 class="text-xl font-semibold mb-4 text-orange-300">Inline CSS is King</h3>
+                        <p class="text-gray-300 mb-4">Most email clients strip or ignore CSS in the &lt;head&gt; section, making inline styles the most reliable method for styling emails.</p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold mb-2">Safe CSS Properties</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        color, background-color
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        font-family, font-size
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        text-align, line-height
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        padding, margin (limited)
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Problematic Properties</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        position: absolute/fixed
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        float, clear
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        z-index
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        CSS Grid, Flexbox
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-800 rounded-xl p-6">
+                            <h3 class="text-lg font-semibold mb-4">Inline CSS Example</h3>
+                            <pre class="text-sm text-purple-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;table width="100%" border="0" cellspacing="0" cellpadding="0"&gt;
+  &lt;tr&gt;
+    &lt;td style="font-family: Arial, sans-serif; 
+               font-size: 16px; 
+               color: #333333;
+               padding: 20px;"&gt;
+      This is styled text with inline CSS
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                            <p class="text-gray-400 text-sm mt-3">Inline styles ensure consistent rendering across email clients.</p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6">
+                            <h3 class="text-lg font-semibold mb-4">Conditional CSS for Outlook</h3>
+                            <pre class="text-sm text-yellow-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;!--[if mso]&gt;
+  &lt;style type="text/css"&gt;
+    .outlook-fix {
+      mso-line-height-rule: exactly;
+    }
+  &lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td class="outlook-fix"&gt;
+      Content with Outlook-specific fixes
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                            <p class="text-gray-400 text-sm mt-3">Conditional comments target Microsoft Outlook specifically.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Responsive Email Design -->
+                <div id="responsive-email" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">Responsive Email Design</h2>
+                    <div class="bg-gray-800 rounded-xl p-6 mb-6">
+                        <h3 class="text-xl font-semibold mb-4 text-orange-300">Mobile-First Approach</h3>
+                        <p class="text-gray-300 mb-4">With over 50% of emails opened on mobile devices, responsive design is crucial for email engagement and readability.</p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold mb-2">Responsive Techniques</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Fluid tables with percentages
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Media queries for mobile
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Stacking columns on small screens
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Touch-friendly button sizes
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Mobile Considerations</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                                        Minimum font size: 14px
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                                        Button size: 44px minimum
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                                        Single column layout
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                                        Optimized image sizes
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-800 rounded-xl p-6">
+                            <h3 class="text-lg font-semibold mb-4">Media Query Example</h3>
+                            <pre class="text-sm text-green-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;style&gt;
+  @media only screen and (max-width: 600px) {
+    .container {
+      width: 100% !important;
+    }
+    .mobile-stack {
+      display: block !important;
+      width: 100% !important;
+    }
+    .mobile-center {
+      text-align: center !important;
+    }
+  }
+&lt;/style&gt;</code></pre>
+                            <p class="text-gray-400 text-sm mt-3">Media queries adapt layout for smaller screens.</p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6">
+                            <h3 class="text-lg font-semibold mb-4">Hybrid Approach</h3>
+                            <pre class="text-sm text-blue-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;table class="container" width="100%"&gt;
+  &lt;tr&gt;
+    &lt;td class="mobile-stack" width="50%"&gt;
+      Column 1
+    &lt;/td&gt;
+    &lt;td class="mobile-stack" width="50%"&gt;
+      Column 2
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;!-- On mobile, columns stack vertically --&gt;</code></pre>
+                            <p class="text-gray-400 text-sm mt-3">Hybrid coding works without media queries for maximum compatibility.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Testing -->
+                <div id="testing-email" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">Email Testing & Debugging</h2>
+                    <div class="bg-gray-800 rounded-xl p-6 mb-6">
+                        <h3 class="text-xl font-semibold mb-4 text-orange-300">Cross-Client Testing</h3>
+                        <p class="text-gray-300 mb-4">Testing emails across different clients and devices is essential to ensure consistent rendering and user experience.</p>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div>
+                                <h4 class="font-semibold mb-2">Testing Tools</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Litmus
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Email on Acid
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                                        Mailchimp Inbox Preview
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Manual Testing</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                                        Gmail (Web & Mobile)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                                        Outlook (Desktop & Web)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                                        Apple Mail
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Common Issues</h4>
+                                <ul class="text-gray-300 text-sm space-y-2">
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        Outlook image scaling
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        Gmail clipping
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                                        Dark mode adaptation
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-800 rounded-xl p-6">
+                            <h3 class="text-lg font-semibold mb-4">Pre-Send Checklist</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-3" checked disabled>
+                                    <div>
+                                        <span class="font-medium">All images have alt text</span>
+                                        <p class="text-gray-400 text-sm">For accessibility and when images are blocked</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-3" checked disabled>
+                                    <div>
+                                        <span class="font-medium">Links are properly formatted</span>
+                                        <p class="text-gray-400 text-sm">All URLs should be absolute with https://</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-3" checked disabled>
+                                    <div>
+                                        <span class="font-medium">Tested in multiple clients</span>
+                                        <p class="text-gray-400 text-sm">Gmail, Outlook, Apple Mail at minimum</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-3" checked disabled>
+                                    <div>
+                                        <span class="font-medium">Mobile responsive</span>
+                                        <p class="text-gray-400 text-sm">Layout adapts to smaller screens</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6">
+                            <h3 class="text-lg font-semibold mb-4">Common Fixes</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-medium text-orange-300">Outlook Image Issues</h4>
+                                    <p class="text-gray-400 text-sm">Add explicit width/height and use VML for background images</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-orange-300">Gmail Padding Problems</h4>
+                                    <p class="text-gray-400 text-sm">Use margin instead of padding or empty table cells for spacing</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-orange-300">Dark Mode</h4>
+                                    <p class="text-gray-400 text-sm">Use transparent PNGs and test color contrast in dark mode</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-orange-300">Apple Mail Specific</h4>
+                                    <p class="text-gray-400 text-sm">Avoid -webkit specific properties for better compatibility</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Resources -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">Email Development Tools</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-gray-800 rounded-xl p-6 text-center">
+                            <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10zm-1-11.414l-3.536-3.536-1.414 1.414 4.95 4.95 7.07-7.07-1.414-1.414-5.656 5.656z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">MJML Framework</h3>
+                            <p class="text-gray-400">Markup language that abstracts the complexity of responsive email.</p>
+                            <a href="https://mjml.io" target="_blank" class="inline-block mt-4 text-orange-400 hover:text-orange-300 text-sm">Visit →</a>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 text-center">
+                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10zm-1-11.414l-3.536-3.536-1.414 1.414 4.95 4.95 7.07-7.07-1.414-1.414-5.656 5.656z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Litmus Builder</h3>
+                            <p class="text-gray-400">Visual email builder with extensive testing capabilities.</p>
+                            <a href="https://litmus.com" target="_blank" class="inline-block mt-4 text-orange-400 hover:text-orange-300 text-sm">Visit →</a>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 text-center">
+                            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10zm-1-11.414l-3.536-3.536-1.414 1.414 4.95 4.95 7.07-7.07-1.414-1.414-5.656 5.656z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Email on Acid</h3>
+                            <p class="text-gray-400">Testing platform with previews across 90+ clients and devices.</p>
+                            <a href="https://www.emailonacid.com" target="_blank" class="inline-block mt-4 text-orange-400 hover:text-orange-300 text-sm">Visit →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Reference -->
+                <div class="bg-gray-800/50 rounded-xl p-8">
+                    <h2 class="text-3xl font-bold mb-6 text-center">Email Development Quick Reference</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-orange-300">Do's</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                    <span>Use table-based layouts</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                    <span>Inline all CSS styles</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                    <span>Add alt text to images</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                    <span>Test across multiple clients</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-orange-300">Don'ts</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                                    <span>Use divs for layout</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                                    <span>External stylesheets</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                                    <span>JavaScript in emails</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                                    <span>Complex CSS positioning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 px-6">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 class="text-4xl font-bold mb-6">Ready to Build Better Emails?</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Apply these email development techniques to create responsive, cross-client compatible emails.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="resources.html" class="bg-orange-500 hover:bg-orange-400 font-medium py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-orange-500 transform transition-all duration-300 hover:scale-105">
+                        More Resources
+                    </a>
+                    <a href="company.html" class="bg-gray-800 hover:bg-gray-700 px-8 py-4 font-medium py-3 px-8 rounded-full hover:shadow-2xl hover:shadow-white transform transition-all duration-300 hover:scale-105">
+                        About This Project
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-12 px-6">
+        <div class="container mx-auto max-w-6xl text-center">
+            <div class="text-2xl font-bold text-orange-300 mb-4">FAFCODE</div>
+            <p class="text-gray-400 mb-6">Student project - Learning web development</p>
+            <div class="text-sm text-gray-500">
+                © 2024 FAFCODE. Educational project for learning purposes.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../index.js"></script>
+</body>
+</html>
