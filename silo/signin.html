@@ -99,9 +99,23 @@
         .form-shake {
             animation: shake 0.5s ease-in-out;
         }
+         .flash-back-topright {
+            position: fixed;
+            top: 20px;
+            left: 32px;
+            z-index: 1100;
+         }
     </style>
 </head>
 <body id="animated-bg" class="bg-black min-h-screen flex items-center justify-center p-4">
+        <!-- Flash Back Button (top right) -->
+    <div class="flash-back-topright">
+        <button onclick="window.history.back();" 
+            class="bg-orange-300 hover:bg-orange-400 text-black font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-faf-light hover:text-black transition-all duration-300 border-2 border-faf-dark focus:outline-none animate-bounce-in hover:shadow-2xl hover:shadow-orange-500 "
+            title="Go Back">
+            <i class="fas fa-arrow-left mr-2"></i>Back
+        </button>
+    </div>
     
     <!-- Toast Container -->
     <div class="toast-container" id="toastContainer"></div>
@@ -171,9 +185,9 @@
             <div class="mt-6">
                 <p class="text-center text-gray-500 text-sm mb-3">Or continue with</p>
                 <div class="flex justify-center space-x-4">
-                    <button type="button" class="p-2 rounded-full border border-gray-600 text-gray-400 hover:border-orange-300 hover:text-faf-light transition-colors duration-300">
+                    <a href="#"  class="p-2 rounded-full border border-gray-600 text-gray-400 hover:border-orange-300 hover:text-faf-light transition-colors duration-300">
                         <i class="fab fa-google"></i>
-                    </button>
+                    </a>
                     <button type="button" class="p-2 rounded-full border border-gray-600 text-gray-400 hover:border-orange-300 hover:text-faf-light transition-colors duration-300">
                         <i class="fab fa-github"></i>
                     </button>
