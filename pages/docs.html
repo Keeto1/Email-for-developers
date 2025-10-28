@@ -10,7 +10,7 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-white font-inter">
+<body id="animated-bg" class="bg-black text-white font-inter">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
         <div class="container mx-auto px-6 py-4">
@@ -28,7 +28,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-black transition-colors">
                     <svg id="menuIcon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -684,10 +684,10 @@
                     Apply these email development techniques to create responsive, cross-client compatible emails.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="resources.html" class="bg-orange-500 hover:bg-orange-400 font-medium py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-orange-500 transform transition-all duration-300 hover:scale-105">
+                    <a href="resources.html" class="bg-orange-400 hover:bg-orange-500 font-medium py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-orange-500 transform transition-all duration-300 hover:scale-105">
                         More Resources
                     </a>
-                    <a href="company.html" class="bg-gray-800 hover:bg-gray-700 px-8 py-4 font-medium py-3 px-8 rounded-full hover:shadow-2xl hover:shadow-white transform transition-all duration-300 hover:scale-105">
+                    <a href="company.html" class="bg-gray-800 hover:bg-gray-700 py-4 px-5  font-medium  rounded-full hover:shadow-2xl hover:shadow-white transform transition-all duration-300 hover:scale-105">
                         About This Project
                     </a>
                 </div>

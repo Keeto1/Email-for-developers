@@ -354,3 +354,14 @@ footer {
     color: black !important;
   }
 }
+#animated-bg {
+  background: linear-gradient(-45deg, #301502, #030200, #140202, #232323);
+  background-size: 400% 400%;
+  animation: gradientMove 16s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

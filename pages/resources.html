@@ -10,9 +10,9 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-white font-inter">
+<body id="animated-bg" class="bg-black text-white font-inter">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black-900/80 backdrop-blur-md border-b border-gray-800">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <a href="../index.html" class="text-2xl font-bold text-orange-300">FAFCODE</a>
@@ -24,11 +24,11 @@
                     <a href="docs.html" class="hover:text-orange-300 transition-colors">Docs</a>
                     <a href="resources.html" class="text-orange-300">Resources</a>
                     <a href="company.html" class="hover:text-orange-300 transition-colors">About</a>
-                    <a href="../silo/signin.html" class="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-lg transition-colors">Sign In</a>
+                    <a href="../silo/signin.html" class="bg-orange-400 hover:bg-orange-600 px-4 py-2 rounded-lg transition-colors">Sign In</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-black transition-colors">
                     <svg id="menuIcon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -45,7 +45,7 @@
             <a href="docs.html" class="hover:text-orange-300 transition-colors">Docs</a>
             <a href="resources.html" class="text-orange-300">Resources</a>
             <a href="company.html" class="hover:text-orange-300 transition-colors">About</a>
-            <a href="../silo/signin.html" class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg transition-colors">Sign In</a>
+            <a href="../silo/signin.html" class="bg-orange-400 hover:bg-orange-600 px-6 py-3 rounded-lg transition-colors">Sign In</a>
         </div>
     </div>
 
@@ -74,28 +74,28 @@
                 <div class="mb-16">
                     <h2 class="text-3xl font-bold mb-8 text-center">My Learning Journey</h2>
                     <div class="grid md:grid-cols-4 gap-6">
-                        <div class="bg-gray-800 rounded-xl p-6 text-center">
+                        <div class="bg-transparent border-2 rounded-xl p-6 text-center">
                             <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span class="text-xl font-bold">1</span>
                             </div>
                             <h3 class="text-lg font-semibold mb-2">HTML Fundamentals</h3>
                             <p class="text-gray-400 text-sm">Structure and semantics</p>
                         </div>
-                        <div class="bg-gray-800 rounded-xl p-6 text-center">
+                        <div class="bg-transparent border-2  rounded-xl p-6 text-center">
                             <div class="w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span class="text-xl font-bold">2</span>
                             </div>
                             <h3 class="text-lg font-semibold mb-2">CSS Styling</h3>
                             <p class="text-gray-400 text-sm">Design and responsiveness</p>
                         </div>
-                        <div class="bg-gray-800 rounded-xl p-6 text-center">
+                        <div class="bg-transparent border-2  rounded-xl p-6 text-center">
                             <div class="w-12 h-12 bg-orange-300 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span class="text-xl font-bold">3</span>
                             </div>
                             <h3 class="text-lg font-semibold mb-2">JavaScript Logic</h3>
                             <p class="text-gray-400 text-sm">Interactivity and functions</p>
                         </div>
-                        <div class="bg-gray-800 rounded-xl p-6 text-center">
+                        <div class="bg-transparent border-2  rounded-xl p-6 text-center">
                             <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span class="text-xl font-bold">4</span>
                             </div>
@@ -371,10 +371,10 @@ form.addEventListener('submit', (e) => {
                     These resources helped me build this project - they can help you too!
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="docs.html" class="bg-orange-500 hover:bg-orange-400 font-medium py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-orange-500 transform transition-all duration-300 hover:scale-105 ">
+                    <a href="docs.html" class="bg-orange-400 hover:bg-orange-400 font-medium py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-orange-500 transform transition-all duration-300 hover:scale-105 ">
                         Check Documentation
                     </a>
-                    <a href="company.html" class="bg-gray-800 hover:bg-gray-700 px-8 py-4 font-medium py-3 px-8 rounded-full hover:shadow-2xl hover:shadow-white transform transition-all duration-300 hover:scale-105">
+                    <a href="company.html" class="bg-gray-800 hover:bg-gray-700font-medium py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-white transform transition-all duration-300 hover:scale-105">
                         About This Project
                     </a>
                 </div>
@@ -383,15 +383,56 @@ form.addEventListener('submit', (e) => {
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-12 px-6">
+    <footer class="bg-red-800/10 py-12 px-6">
         <div class="container mx-auto max-w-6xl text-center">
             <div class="text-2xl font-bold text-orange-300 mb-4">FAFCODE</div>
-            <p class="text-gray-400 mb-6">Student project - Learning web development</p>
+            <p class="text-gray-400 mb-6">Student project By MOURAD ZNIDI - Learning web development</p>
             <div class="text-sm text-gray-500">
-                © 2024 FAFCODE. Educational project for learning purposes.
+                © 2025 FAFCODE. Educational project for learning purposes.
             </div>
         </div>
     </footer>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    let isMenuOpen = false;
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          mobileMenu.classList.remove('hidden');
+          if (menuIcon) menuIcon.style.transform = 'rotate(90deg)';
+          document.body.style.overflow = 'hidden';
+        } else {
+          mobileMenu.classList.add('hidden');
+          if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Optional: close menu when clicking a link in mobileMenu
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+          document.body.style.overflow = 'auto';
+          isMenuOpen = false;
+        });
+      });
+
+      // Optional: close menu on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isMenuOpen) {
+          menuButton.click();
+        }
+      });
+    }
+  });
+</script>
+
 
     <!-- Scripts -->
     <script src="../index.js"></script>

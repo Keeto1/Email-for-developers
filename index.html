@@ -40,7 +40,7 @@
     <!-- Spline SDK -->
     <script src="https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js"></script>
 </head>
-<body class="bg-black font-sans text-white overflow-x-hidden">
+<body id="animated-bg" class="bg-black font-sans text-white overflow-x-hidden">
     <!-- Enhanced Preloader -->
     <div id="preloader" class="fixed inset-0 bg-black z-50 flex items-center justify-center">
         <div class="animate-pulse flex flex-col items-center">
@@ -52,8 +52,9 @@
 
     <main class="relative">
         <!-- Background elements -->
-        <img src="gradient.png" alt="gradient background" class="absolute ml-[55%] mt-[10%] opacity-60 -z-10">
-        <div class="h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_20px_#e99b63] -rotate-[30deg] -z-10"></div>
+        <img src="gradient.png" alt="gradient background" class="absolute left-1/2 top-24 -translate-x-1/2 opacity-60 -z-10 w-[90vw] max-w-xl hidden sm:block">
+
+        <div class="h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_20px_#e99b63] -rotate-[30deg] -z-10 hidden sm:block"></div>
 
         <!-- Enhanced Header -->
         <header class="fixed w-full flex justify-between items-center py-4 px-4 lg:px-20 leading-relaxed bg-black/80 backdrop-blur-sm z-40 transition-all duration-300" id="header">
@@ -169,7 +170,7 @@
                     <div class="w-20 h-1 bg-gradient-to-r from-[#e99b63] to-[#f5d5b8] mx-auto rounded-full"></div>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Feature 1 -->
                     <div class="feature-card bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-[#e99b63]/30 transition-all duration-300 hover:shadow-xl hover:shadow-[#e99b63]/10 transform hover:-translate-y-2">
                         <div class="feature-icon w-12 h-12 bg-[#e99b63]/10 rounded-lg flex items-center justify-center mb-6">
@@ -335,14 +336,14 @@
 
         <!-- Enhanced CTA Section -->
         <section class="py-20 px-4 lg:px-20 bg-gradient-to-b from-black/50 to-black relative overflow-hidden" id="cta">
-            <div class="absolute inset-0 bg-gradient-radial opacity-20 -z-10"></div>
-            <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="absolute inset-0 bg-gradient-radial opacity-30 -z-10 hidden sm:block"></div>
+            <div class="max-w-4xl mx-auto text-center relative z-10 hidden sm:block">
                 <div class="animate-on-scroll">
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">Interested in this concept?</h2>
                     <p class="text-gray-400 mb-10 max-w-2xl mx-auto">This is a student project showcasing a concept for developer-friendly email infrastructure.</p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                        <button class="btn-primary bg-[#e99b63] hover:bg-[#f5b881] text-white font-medium py-4 px-10 rounded-full hover:shadow-2xl hover:shadow-orange-500 transform transition-all duration-300 hover:scale-105">
+                        <button class="btn-primary bg-[#e99b63] hover:bg-[#f5b881] text-white font-medium py-4 px-10 rounded-full hover:shadow-2xl hover:shadow-orange-500 transform transition-all duration-300 hover:scale-105 w-full sm:w-auto">
                             View Source Code
                         </button>
                         <button class="btn-secondary border border-gray-600 hover:border-[#e99b63] text-white font-medium py-4 px-10 rounded-full transform transition-all duration-300 hover:scale-105">
