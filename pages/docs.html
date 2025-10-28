@@ -1,59 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Development Docs - FAFCODE</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources - FAFCODE</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body id="animated-bg" class="bg-black text-white font-inter">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="../index.html" class="text-2xl font-bold text-orange-300">FAFCODE</a>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="../index.html" class="hover:text-orange-300 transition-colors">Home</a>
-                    <a href="features.html" class="hover:text-orange-300 transition-colors">Features</a>
-                    <a href="docs.html" class="text-orange-300">Docs</a>
-                    <a href="resources.html" class="hover:text-orange-300 transition-colors">Resources</a>
-                    <a href="company.html" class="hover:text-orange-300 transition-colors">About</a>
-                    <a href="../silo/signin.html" class="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-lg transition-colors">Sign In</a>
-                </div>
+<body id="animated-bg" class="bg-black text-white font-inter overflow-x-hidden">
 
-                <!-- Mobile Menu Button -->
-                <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-black transition-colors">
-                    <svg id="menuIcon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md border-b border-gray-800">
+    <div class="container mx-auto px-6 py-4 overflow-x-hidden">
+      <div class="flex items-center justify-between">
+        <a href="../index.html" class="text-2xl font-bold text-orange-300">FAFCODE</a>
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="../index.html" class="hover:text-orange-300 transition-colors">Home</a>
+          <a href="features.html" class="hover:text-orange-300 transition-colors">Features</a>
+          <a href="docs.html" class="hover:text-orange-300 transition-colors">Docs</a>
+          <a href="resources.html" class="text-orange-300">Resources</a>
+          <a href="company.html" class="hover:text-orange-300 transition-colors">About</a>
+          <a href="../silo/signin.html" class="bg-orange-400 hover:bg-orange-600 px-4 py-2 rounded-lg transition-colors">Sign In</a>
         </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="fixed inset-0 z-40 bg-gray-900/95 backdrop-blur-md hidden">
-        <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
-            <a href="../index.html" class="hover:text-orange-300 transition-colors">Home</a>
-            <a href="features.html" class="hover:text-orange-300 transition-colors">Features</a>
-            <a href="docs.html" class="text-orange-300">Docs</a>
-            <a href="resources.html" class="hover:text-orange-300 transition-colors">Resources</a>
-            <a href="company.html" class="hover:text-orange-300 transition-colors">About</a>
-            <a href="../silo/signin.html" class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg transition-colors">Sign In</a>
-        </div>
+        <!-- Mobile Menu Button -->
+        <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-transparent transition-colors">
+          <svg id="menuIcon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
     </div>
+  </nav>
 
-    <!-- Main Content -->
-    <main class="pt-20">
-        <!-- Hero Section -->
-        <section class="py-20 px-6">
-            <div class="container mx-auto max-w-4xl text-center">
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 bg-black backdrop-blur-md hidden">
+    <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl overflow-x-hidden">
+      <a href="../index.html" class="hover:text-orange-300 transition-colors">Home</a>
+      <a href="features.html" class="hover:text-orange-300 transition-colors">Features</a>
+      <a href="docs.html" class="hover:text-orange-300 transition-colors">Docs</a>
+      <a href="resources.html" class="text-orange-300">Resources</a>
+      <a href="company.html" class="hover:text-orange-300 transition-colors">About</a>
+      <a href="../silo/signin.html" class="bg-orange-400 hover:bg-orange-600 px-6 py-3 rounded-lg transition-colors">Sign In</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="pt-20 overflow-x-hidden">
+            <div class="container mx-auto max-w-4xl text-center overflow-x-hidden">
                 <h1 class="text-5xl md:text-6xl font-bold mb-6 hero-animate">
                     Email <span class="text-orange-300">Development</span> Docs
                 </h1>
@@ -69,7 +66,7 @@
 
         <!-- Email Development Basics -->
         <section class="py-16 px-6">
-            <div class="container mx-auto max-w-6xl">
+            <div class="container mx-auto max-w-6xl overflow-x-hidden">
                 <div class="mb-16">
                     <h2 class="text-3xl font-bold mb-8">Email Development Fundamentals</h2>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -244,7 +241,8 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="bg-gray-800 rounded-xl p-6">
                             <h3 class="text-lg font-semibold mb-4">Basic Email Structure</h3>
-                            <pre class="text-sm text-green-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;!DOCTYPE html&gt;
+                            <pre class="text-sm text-green-400 overflow-x-auto w-full bg-gray-900 p-4 rounded-lg">
+<code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
@@ -269,7 +267,7 @@
 
                         <div class="bg-gray-800 rounded-xl p-6">
                             <h3 class="text-lg font-semibold mb-4">Email Head Requirements</h3>
-                            <pre class="text-sm text-blue-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+                            <pre class="text-sm text-blue-400 overflow-x-auto -w-full bg-gray-900 p-4 rounded-lg"><code>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
 &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 &lt;title&gt;Your Email Subject&lt;/title&gt;
 &lt;!--[if mso]&gt;
@@ -340,7 +338,7 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="bg-gray-800 rounded-xl p-6">
                             <h3 class="text-lg font-semibold mb-4">Inline CSS Example</h3>
-                            <pre class="text-sm text-purple-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;table width="100%" border="0" cellspacing="0" cellpadding="0"&gt;
+                            <pre class="text-sm text-purple-400 overflow-x-auto w-full  bg-gray-900 p-4 rounded-lg"><code>&lt;table width="100%" border="0" cellspacing="0" cellpadding="0"&gt;
   &lt;tr&gt;
     &lt;td style="font-family: Arial, sans-serif; 
                font-size: 16px; 
@@ -355,7 +353,7 @@
 
                         <div class="bg-gray-800 rounded-xl p-6">
                             <h3 class="text-lg font-semibold mb-4">Conditional CSS for Outlook</h3>
-                            <pre class="text-sm text-yellow-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;!--[if mso]&gt;
+                            <pre class="text-sm text-yellow-400 overflow-x-auto max-w-full bg-gray-900 p-4 rounded-lg"><code>&lt;!--[if mso]&gt;
   &lt;style type="text/css"&gt;
     .outlook-fix {
       mso-line-height-rule: exactly;
@@ -430,7 +428,7 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="bg-gray-800 rounded-xl p-6">
                             <h3 class="text-lg font-semibold mb-4">Media Query Example</h3>
-                            <pre class="text-sm text-green-400 overflow-x-auto bg-gray-900 p-4 rounded-lg"><code>&lt;style&gt;
+                            <pre class="text-sm text-green-400 overflow-x-auto w-full  bg-gray-900 p-4 rounded-lg"><code>&lt;style&gt;
   @media only screen and (max-width: 600px) {
     .container {
       width: 100% !important;
@@ -678,7 +676,7 @@
 
         <!-- CTA Section -->
         <section class="py-20 px-6">
-            <div class="container mx-auto max-w-4xl text-center">
+            <div class="container mx-auto max-w-4xl text-center overflow-x-hidden">
                 <h2 class="text-4xl font-bold mb-6">Ready to Build Better Emails?</h2>
                 <p class="text-xl text-gray-300 mb-8">
                     Apply these email development techniques to create responsive, cross-client compatible emails.
@@ -697,7 +695,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 py-12 px-6">
-        <div class="container mx-auto max-w-6xl text-center">
+        <div class="container mx-auto max-w-6xl text-center overflow-x-hidden">
             <div class="text-2xl font-bold text-orange-300 mb-4">FAFCODE</div>
             <p class="text-gray-400 mb-6">Student project - Learning web development</p>
             <div class="text-sm text-gray-500">
