@@ -294,6 +294,7 @@ class ScrollEffects {
 // Initialize scroll effects
 document.addEventListener('DOMContentLoaded', () => {
     window.scrollEffects = new ScrollEffects();
+    
 });
 
 // Handle resize events

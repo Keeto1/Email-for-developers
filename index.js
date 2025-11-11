@@ -228,17 +228,136 @@ class FafcodeApp {
         window.addEventListener('scroll', onScroll, { passive: true });
     }
 
-    // Form Validation
-    setupFormValidation() {
-        const forms = document.querySelectorAll('form');
-
-        forms.forEach(form => {
+    // Form Validation with backend integration
+ setupFormValidation() {
+    // Handles all other forms with this.validateForm
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        // Skip sign-in and sign-up so we can handle them specifically
+        if (form.id !== "signinForm" && form.id !== "signupForm") {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
                 this.validateForm(form);
             });
+        }
+    });
+
+    // ---- Custom SIGN IN HANDLER ----
+    const signinForm = document.getElementById('signinForm');
+    if (signinForm) {
+        signinForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let isValid = true;
+            const email = document.getElementById('signinEmail').value;
+            const password = document.getElementById('signinPassword').value;
+
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                isValid = false;
+                toast.error('Please enter a valid email');
+            }
+            if (!password || password.length < 6) {
+                isValid = false;
+                toast.error('Password must be at least 6 characters.');
+            }
+
+            if (isValid) {
+                try {
+                    const res = await fetch('http://localhost:4000/api/signin', {
+                        method: 'POST',
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email, password }),
+                    });
+                    const data = await res.json();
+                    if (res.ok) {
+                        toast.success('Sign in successful! Redirecting...');
+                        signinForm.reset();
+                        setTimeout(() => {
+                            window.location.href = "/pages/index.html"; // Change to your page!
+                        }, 1200);
+                    } else {
+                        toast.error(data.message || "Sign in failed");
+                        shakeForm(signinForm);
+                    }
+                } catch (error) {
+                    toast.error("Network error");
+                    shakeForm(signinForm);
+                }
+            } else {
+                shakeForm(signinForm);
+            }
         });
     }
+
+    // ---- Custom SIGN UP HANDLER ----
+    const signupForm = document.getElementById('signupForm');
+    if (signupForm) {
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let isValid = true;
+            const name = document.getElementById('signupName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('signupConfirmPassword').value;
+            const terms = document.getElementById('acceptTerms').checked;
+
+            if (!name || name.length < 2) {
+                isValid = false;
+                toast.error('Please enter your full name');
+            }
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                isValid = false;
+                toast.error('Please enter a valid email address');
+            }
+            if (!password || password.length < 8) {
+                isValid = false;
+                toast.error('Password must be at least 8 characters');
+            } else if (!/\d/.test(password)) {
+                isValid = false;
+                toast.error('Password must contain at least one number');
+            } else if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
+                isValid = false;
+                toast.error('Password must contain at least one special character');
+            }
+            if (password !== confirmPassword) {
+                isValid = false;
+                toast.error('Passwords do not match');
+            }
+            if (!terms) {
+                isValid = false;
+                toast.error('You must accept the terms and conditions');
+            }
+
+            if (isValid) {
+                try {
+                    const res = await fetch('http://localhost:4000/api/signup', {
+                        method: 'POST',
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email, password, name }),
+                    });
+                    const data = await res.json();
+                    if (res.ok) {
+                        toast.success('Account created successfully! You can now sign in.');
+                        signupForm.reset();
+                        setTimeout(() => {
+                            document.getElementById('signinTab')?.click();
+                        }, 2000);
+                    } else {
+                        toast.error(data.message || "Sign up failed");
+                        shakeForm(signupForm);
+                    }
+                } catch (error) {
+                    toast.error("Network error");
+                    shakeForm(signupForm);
+                }
+            } else {
+                shakeForm(signupForm);
+            }
+        });
+    }
+}
+
+
+
 
     validateForm(form) {
         const inputs = form.querySelectorAll('input[required], textarea[required]');
@@ -434,6 +553,27 @@ class Utils {
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
     window.fafcodeApp = new FafcodeApp();
+      // Password match indicator
+    const signupPassword = document.getElementById('signupPassword');
+    const signupConfirmPassword = document.getElementById('signupConfirmPassword');
+
+    if (signupPassword && signupConfirmPassword) {
+        function checkPasswordMatch() {
+            if (signupConfirmPassword.value.length === 0) {
+                signupConfirmPassword.classList.remove('border-green-500', 'border-red-500');
+            } else if (signupConfirmPassword.value === signupPassword.value) {
+                signupConfirmPassword.classList.add('border-green-500');
+                signupConfirmPassword.classList.remove('border-red-500');
+            } else {
+                signupConfirmPassword.classList.remove('border-green-500');
+                signupConfirmPassword.classList.add('border-red-500');
+            }
+        }
+
+        signupPassword.addEventListener('input', checkPasswordMatch);
+        signupConfirmPassword.addEventListener('input', checkPasswordMatch);
+    }
+
 });
 
 // Export for module usage
