@@ -357,7 +357,7 @@ footer {
   }
 }
 #animated-bg {
-  background: linear-gradient(-45deg, #301502, #030200, #140202, #232323);
+  background: linear-gradient(-45deg, #220f01, #030200, #240404, #232323);
   background-size: 400% 400%;
   animation: gradientMove 16s ease-in-out infinite;
 }
@@ -366,4 +366,16 @@ footer {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+pre, code {
+  overflow-x: auto !important;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* For container, grid, and other wide elements */
+.container, .grid, [class*='col-'] {
+  overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
