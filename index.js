@@ -580,3 +580,31 @@ document.addEventListener('DOMContentLoaded', () => {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { FafcodeApp, Utils };
 }
+// APIS 
+async function generateApiKey() {
+  const userId = localStorage.getItem('userId');
+  const res = await fetch('http://localhost:4000/api/keys', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userId, name: 'My Key' })
+  });
+  const data = await res.json();
+  console.log("Your API key (show once!):", data.api_key);
+  // You can also save in frontend temporarily
+  localStorage.setItem('apiKey', data.api_key);
+}
+async function sendEmail(to, subject, body) {
+  const apiKey = localStorage.getItem('apiKey');
+  const res = await fetch('http://localhost:4000/v1/email/send', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`
+    },
+    body: JSON.stringify({ to, subject, body })
+  });
+  const data = await res.json();
+  console.log(data);
+}
+
+
